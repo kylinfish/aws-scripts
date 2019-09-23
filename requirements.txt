@@ -1,0 +1,4 @@
+boto3
+aws_requests_auth
+awscli
+requests_aws4auth

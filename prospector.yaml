@@ -1,0 +1,62 @@
+output-format: grouped
+strictness: veryhigh
+auto-dected: true
+test-warnings: true
+doc-warnings: false
+member-warnings: true
+max-line-length: 125 # refer https://stackoverflow.com/questions/22207920/
+
+ignore-paths:
+  - node_modules
+  - venv
+  - env
+  - .env
+  - .venv
+
+ignore-patterns:
+  - .+/migrations/.+
+  - .+/settings/.+
+
+
+# pydocstring definition (Prefix-D)
+# http://www.pydocstyle.org/en/2.1.1/error_codes.html
+
+# PEP-8 Naming Conventions (Prefix-N)
+# https://pypi.org/project/pep8-naming/
+pep8:
+  full: true
+  disable:
+    - D100
+    - D101
+    - D102
+    - D103
+    - D105
+    - D205
+    - D400
+    - N802  # function name should be lowercase, breaks on tests
+
+# Flake8 
+# http://flake8.pycqa.org/en/2.5.5/warnings.html
+pyflakes:
+  disable:
+    - F999
+
+pylint:
+  disable:
+    - too-few-public-methods
+    - invalid-name
+    - no-self-use
+    - no-member
+
+pep257:
+  disable:
+    - D100
+    - D101
+    - D102
+    - D103
+    - D205
+    - D400
+    - D401
+
+dodgy:
+  run: true
